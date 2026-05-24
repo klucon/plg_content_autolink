@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "name": "plg_content_autolink",
+  "type": "plugin",
+  "vendor": "klucon",
+  "extension_id": "klucon/plg_content_autolink",
+  "version": "0.1.0",
+  "display_name": "Obsah - Automatické odkazy",
+  "display_name_key": "extensions.name.plg_content_autolink",
+  "description": "Doplňuje interní odkazy do obsahu článků podle konfigurovaného slovníku.",
+  "license": "MIT",
+  "author": {
+    "name": "KLUCON",
+    "url": "https://klucon.cz"
+  },
+  "links": {
+    "homepage": "https://marketplace.klucon.cz",
+    "repository": "https://github.com/klucon/plg_content_autolink"
+  },
+  "compatibility": {
+    "core_min": "0.2.15",
+    "python": ">=3.12"
+  },
+  "package": {
+    "entrypoint": "src.plugins.plg_content_autolink",
+    "setup_function": "setup"
+  },
+  "migrations": {
+    "enabled": false,
+    "path": "migrations"
+  },
+  "security": {
+    "capabilities": ["plugin.hooks", "database.write"]
+  },
+  "settings_schema": [
+    {
+      "key": "terms",
+      "type": "json",
+      "label": "Slovník odkazů",
+      "help": "JSON objekt ve tvaru {\"výraz\": \"/cilova-url\"}."
+    }
+  ],
+  "marketplace": {
+    "category": "content",
+    "tags": ["content", "links", "seo"]
+  },
+  "i18n": {
+    "domain": "plg_content_autolink"
+  },
+  "locales": ["cs_CZ", "en_GB"],
+  "changelog": "První verze automatických interních odkazů pro články."
+}
