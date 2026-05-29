@@ -4,7 +4,7 @@
   "type": "plugin",
   "vendor": "klucon",
   "extension_id": "klucon/plg_content_autolink",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "display_name": "Obsah - Automatické odkazy",
   "display_name_key": "extensions.name.plg_content_autolink",
   "description": "Doplňuje interní odkazy do obsahu článků podle konfigurovaného slovníku.",
@@ -30,7 +30,10 @@
     "path": "migrations"
   },
   "security": {
-    "capabilities": ["plugin.hooks", "database.write"]
+    "capabilities": [
+      "plugin.hooks",
+      "database.write"
+    ]
   },
   "settings_schema": [
     {
@@ -42,11 +45,18 @@
   ],
   "marketplace": {
     "category": "content",
-    "tags": ["content", "links", "seo"]
+    "tags": [
+      "content",
+      "links",
+      "seo"
+    ]
   },
   "i18n": {
     "domain": "plg_content_autolink"
   },
-  "locales": ["cs_CZ", "en_GB"],
+  "locales": [
+    "cs_CZ",
+    "en_GB"
+  ],
   "changelog": "První verze automatických interních odkazů pro články."
 }
